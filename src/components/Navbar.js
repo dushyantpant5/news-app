@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export class Navbar extends Component {
   
@@ -7,7 +8,7 @@ export class Navbar extends Component {
   render() {
     return (
      <>
-                <nav className="navbar navbar-expand-lg bg-light">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
             <a className="navbar-brand" href="/">News-Paper</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,12 +29,12 @@ export class Navbar extends Component {
                     </a>
                     <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                         {/* <li><a className="dropdown-item" href="/">General</a></li>    */}
-                        <li><a className="dropdown-item" href="/">Technology</a></li>
-                        <li><a className="dropdown-item" href="/">Entertainment</a></li>
-                        <li><a className="dropdown-item" href="/">Business</a></li>
-                        <li><a className="dropdown-item" href="/">Sports</a></li>
-                        <li><a className="dropdown-item" href="/">Science</a></li>
-                        <li><a className="dropdown-item" href="/">Health</a></li>
+                        <li><Link className="dropdown-item" to="/technology">Technology</Link></li>
+                        <li><Link className="dropdown-item" to="/entertainment">Entertainment</Link></li>
+                        <li><Link className="dropdown-item" to="/business">Business</Link></li>
+                        <li><Link className="dropdown-item" to="/sports">Sports</Link></li>
+                        <li><Link className="dropdown-item" to="/science">Science</Link></li>
+                        <li><Link className="dropdown-item" to="/health">Health</Link></li>
  
                     </ul>
                     </li>

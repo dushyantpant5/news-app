@@ -69,12 +69,12 @@ render() {
     return (
       <>
       <div className="container my-3">
-        <h1>TOP HEADLINES</h1>
+        <h1 className='text-center my-3'>TOP HEADLINES</h1>
         {this.state.loading && <LoadingSpinner/>}
         <div className="row">
             {!this.state.loading && this.state.articles.map((element) =>{
                return <div className="col-md-4" key={element.title}>
-                    <NewsItem title={element.title} description = {element.description} imgUrl={element.urlToImage} newsUrl={element.url}/>
+                    <NewsItem title={element.title} description = {element.description} imgUrl={element.urlToImage} newsUrl={element.url} author = {element.author} publishTime={element.publishedAt} source = {element.source.name}/>
                 </div>
             })}
         </div>
